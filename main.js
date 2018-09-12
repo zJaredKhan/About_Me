@@ -10,11 +10,11 @@ console.log('The user is ' + userName);
 var reading = prompt('Does Jared like to read?');
 var readingUpper = reading.toUpperCase();
 if (readingUpper === 'YES' || readingUpper === 'Y'){
-  alert('That is correct');
+  alert('That is correct.');
 }else if (readingUpper === 'NO' || readingUpper === 'N'){
   alert('Actually Jared loves reading!');
 }else{
-  alert('I expected the answers yes or no');
+  alert('I expected the answers yes or no.');
 }
 console.log('User answered ' + reading);
 
@@ -22,9 +22,9 @@ console.log('User answered ' + reading);
 var camping = prompt('Does Jared like camping?');
 var campingUpper = camping.toUpperCase();
 if (campingUpper === 'YES' || campingUpper === 'Y'){
-  alert('Absolutely! Jared loves camping');
+  alert('Absolutely! Jared loves camping.');
 }else if (campingUpper === 'NO' || campingUpper === 'N'){
-  alert('Jared actually loves sleeping under the stars');
+  alert('Jared actually loves sleeping under the stars.');
 }else{
   alert('I expected the answers yes or no');
 }
@@ -34,13 +34,13 @@ console.log('They answered ' + camping + ' for camping');
 var job = prompt('Is Jared a professional gamer?');
 var jobUpper = job.toUpperCase();
 if (jobUpper === 'YES' || jobUpper === 'Y'){
-  alert('While Jared used to be highly ranked in R6 ladders, he is not a pro');
+  alert('While Jared used to be highly ranked in R6 ladders, he is not a pro.');
 }else if (jobUpper === 'NO' || jobUpper === 'N'){
-  alert('Correct, he is a Network Engineer');
+  alert('Correct, he is a Network Engineer.');
 }else{
-  alert('I expected the answers yes or no');
+  alert('I expected the answers yes or no.');
 }
-console.log('They answered ' + job + ' for if I am a pro gamer');
+console.log('They answered ' + job + ' for if I am a pro gamer.');
 
 //Ask if Jared can code
 var code = prompt('Can Jared code?');
@@ -60,5 +60,5 @@ var iddqdUpper = iddqd.toUpperCase();
 if (iddqdUpper === 'DOOM' || iddqdUpper === 'DOOM!'){
   alert('Oh yeah! Watch out for those Cyber Demons!');
 }else{
-  alert('You must be too young for that question');
+  alert('You must be too young for that question!');
 }
