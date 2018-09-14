@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 //Get username and welcome to site
 var userName = prompt('Welcome to my site, what is your name?');
 
@@ -26,7 +26,7 @@ if (campingUpper === 'YES' || campingUpper === 'Y'){
 }else if (campingUpper === 'NO' || campingUpper === 'N'){
   alert('Jared actually loves sleeping under the stars.');
 }else{
-  alert('I expected the answers yes or no');
+  alert('I expected the answers yes or no.');
 }
 console.log('They answered ' + camping + ' for camping');
 
@@ -62,3 +62,4 @@ if (iddqdUpper === 'DOOM' || iddqdUpper === 'DOOM!'){
 }else{
   alert('You must be too young for that question!');
 }
+console.log('They answered ' + iddqd);

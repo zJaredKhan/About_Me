@@ -5,13 +5,41 @@
     margin-right: auto;
 }
 
-* {
-    background-color: rgb(217, 252, 251);
+.box35 {
+    box-sizing: border-box;
+    width: 35%;
+    display: inline-block;
 }
+/* {
+    background-color: rgb(217, 252, 251);
+    outline-style: dotted;
+}*/
+
 .bio {
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif
 }
+
 img { 
     border:2px solid #021a40;
+ }
+
+ .inline {
+     display: inline-block;
+     height: 200px;
+     width: 45%;
+     border:2px solid;
+     position: relative;
+     top: 0px
+ }
+
+ .alignleft{
+     margin-left: 25px;
+     padding-left: 5px;
+ }
+
+ .alignright{
+     float: right;
+     margin-right: 25px;
+     padding-left: 5px;
  }
