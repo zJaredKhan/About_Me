@@ -1,10 +1,16 @@
-"use strict";
-/*
+'use strict';
+
+//Define favorite JRPG games
+var jrpgs = ['CHRONO TRIGGER', 'FINAL FANTASY 6', 'FINAL FANTASY 7', 'SECRET OF MANA'];
+
 //Get username and welcome to site
 var userName = prompt('Welcome to my site, what is your name?');
 
 alert('Welcome to my site ' + userName + '!');
 console.log('The user is ' + userName);
+
+//Variable for tracking correct answers
+var answersCorrect = 0;
 
 //Ask if Jared likes to read
 var reading = prompt('Does Jared like to read?');
@@ -16,7 +22,13 @@ if (readingUpper === 'YES' || readingUpper === 'Y'){
 }else{
   alert('I expected the answers yes or no.');
 }
+
 console.log('User answered ' + reading);
+
+if (readingUpper === 'YES' || readingUpper === 'Y'){
+  answersCorrect++;
+}
+
 
 //ask if Jared likes to camp
 var camping = prompt('Does Jared like camping?');
@@ -30,6 +42,10 @@ if (campingUpper === 'YES' || campingUpper === 'Y'){
 }
 console.log('They answered ' + camping + ' for camping');
 
+if (campingUpper === 'YES' || campingUpper === 'Y'){
+  answersCorrect++;
+}
+
 //Ask if Jared is a Pro gamer
 var job = prompt('Is Jared a professional gamer?');
 var jobUpper = job.toUpperCase();
@@ -40,7 +56,11 @@ if (jobUpper === 'YES' || jobUpper === 'Y'){
 }else{
   alert('I expected the answers yes or no.');
 }
+
 console.log('They answered ' + job + ' for if I am a pro gamer.');
+if (jobUpper === 'NO' || jobUpper === 'N'){
+  answersCorrect++;
+}
 
 //Ask if Jared can code
 var code = prompt('Can Jared code?');
@@ -54,6 +74,10 @@ if (codeUpper === 'YES' || codeUpper === 'Y'){
 }
 console.log('Do they think I can code? ' + code);
 
+if (codeUpper === 'YES' || codeUpper === 'Y'){
+  answersCorrect++;
+}
+
 //Ask if they know about IDDQD
 var iddqd = prompt('What game is the code "IDDQD" from?');
 var iddqdUpper = iddqd.toUpperCase();
@@ -63,3 +87,30 @@ if (iddqdUpper === 'DOOM' || iddqdUpper === 'DOOM!'){
   alert('You must be too young for that question!');
 }
 console.log('They answered ' + iddqd);
+
+if (iddqdUpper === 'DOOM' || iddqdUpper === 'DOOM!'){
+  answersCorrect++;
+}
+
+//Nested for if loop for guessing favorite game
+var i = 5;
+for (i = 5; i > 0; i--) {
+  var gameGuess = prompt('Can you guess one of my favorite JRPGs?');
+  var gameGuessUpper = gameGuess.toUpperCase();
+  if (gameGuessUpper === jrpgs[0] || gameGuessUpper === jrpgs[1] || gameGuessUpper === jrpgs[2] || gameGuessUpper === jrpgs[3]){
+    alert('That is correct, Jared spent many hours playing ' + gameGuess + '!');
+    answersCorrect++;
+    break;
+  }else{
+    alert('That game is great but not one of my favorites! You have ' + i + ' guesses remaining.');
+  }
+}
+console.log('The last accepted answer was ' + gameGuess);
+
+//How the user did
+if (answersCorrect >= 5){
+  alert('You got ' + answersCorrect + ' answers right! Great job!');
+}else{
+  alert('You got ' + answersCorrect + '. Please try again!');
+}
+
