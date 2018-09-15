@@ -92,9 +92,28 @@ if (iddqdUpper === 'DOOM' || iddqdUpper === 'DOOM!'){
   answersCorrect++;
 }
 
+//Nested for if loop for guessing how many countries I've been to
+var n = 3;
+for (n = 3; n >= 0; n--) {
+  var countryGuess = prompt('Guess how many countries Jared has been to!');
+  if (countryGuess === '9' || countryGuess === 'Nine'){
+    alert('You got it! 9!');
+    answersCorrect++;
+    break;
+  }else if (countryGuess > 9){
+    alert('Nope, your answer was too high! try again! You have ' + n + ' attemps left');
+  }else if (countryGuess < 9){
+    alert('Nope, too low! You have ' + n + ' attemps left.');
+  }
+}
+
+alert('Ok last question!');
+
+console.log('Their last accepted answer was ' + countryGuess);
+
 //Nested for if loop for guessing favorite game
 var i = 5;
-for (i = 5; i > 0; i--) {
+for (i = 5; i >= 0; i--) {
   var gameGuess = prompt('Can you guess one of my favorite JRPGs?');
   var gameGuessUpper = gameGuess.toUpperCase();
   if (gameGuessUpper === jrpgs[0] || gameGuessUpper === jrpgs[1] || gameGuessUpper === jrpgs[2] || gameGuessUpper === jrpgs[3]){
@@ -109,7 +128,7 @@ console.log('The last accepted answer was ' + gameGuess);
 
 //How the user did
 if (answersCorrect >= 5){
-  alert('You got ' + answersCorrect + ' answers right! Great job!');
+  alert('You got ' + answersCorrect + ' out of 7 answers right! Great job!');
 }else{
   alert('You got ' + answersCorrect + '. Please try again!');
 }
