@@ -5,15 +5,9 @@
     margin-right: auto;
 }
 
-.box35 {
-    box-sizing: border-box;
-    width: 35%;
-    display: inline-block;
-}
-/* {
+* {
     background-color: rgb(217, 252, 251);
-    outline-style: dotted;
-}*/
+}
 
 .bio {
     font-size: larger;
@@ -30,7 +24,10 @@ img {
      width: 45%;
      border:2px solid;
      position: relative;
-     top: 0px
+     top: 0px;
+     box-shadow: 5px 10px 8px #888888;
+     border-radius: 5px;
+     
  }
 
  .alignleft{

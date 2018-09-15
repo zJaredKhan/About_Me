@@ -133,3 +133,4 @@ if (answersCorrect >= 5){
   alert('You got ' + answersCorrect + '. Please try again!');
 }
 
+document.write('You got ' + answersCorrect + ' out of 7 correct! ');
